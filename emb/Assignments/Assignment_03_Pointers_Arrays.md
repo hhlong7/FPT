@@ -24,7 +24,7 @@ Contents
 uint8_t rx_buffer[64];
 uint16_t rx_index = 0;
 
-// Hàm này chạy trong Ngắt (ISR) mỗi khi có 1 byte đến
+// Hàm này chạy trong Ngắt (ISR) mỗi khi có 1 byte đến0
 void UART_Receive_ISR() {
     uint8_t incoming_byte = UART_Read_Data_Register();
     rx_buffer[rx_index] = incoming_byte;
